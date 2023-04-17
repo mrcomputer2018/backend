@@ -1,10 +1,9 @@
 const express = require('express');
+const tasksController = require('../controllers/tasksController');
 
 const router = express.Router();
 
 //Rotas
-router.get('/tasks', (req, res) => {
-    res.json({ msg: 'Hello World!!!' });
-});
+router.get('/tasks', tasksController.getAll);
 
 module.exports = router;
